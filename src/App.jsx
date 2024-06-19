@@ -10,6 +10,10 @@ import experienceIcon from "./assets/professional.svg";
 function App() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [location, setLocation] = useState('');
+  const [summary, setSummary] = useState('');
 
   const largeInput = 300;
   const smallInput = 120;
@@ -27,9 +31,10 @@ function App() {
           <Form label="General Information" icon={generalIcon}>
             <InputElem label="First Name" inputWidth={largeInput} value={firstName} onChange={(e) => setFirstName(e.target.value)}/>
             <InputElem label="Last Name" inputWidth={largeInput}  value={lastName} onChange={(e) => setLastName(e.target.value)}/>
-            <InputElem label="Email" inputWidth={largeInput} />
-            <InputElem label="Phone Number" inputWidth={largeInput} />
-            <InputElem label="Location" inputWidth={largeInput} />
+            <InputElem type='email' label="Email" inputWidth={largeInput} value={email} onChange={(e) => setEmail(e.target.value)}/>
+            <InputElem type='tel' label="Phone Number" inputWidth={largeInput}  value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)}/>
+            <InputElem label="Location" inputWidth={largeInput}  value={location} onChange={(e) => setLocation(e.target.value)}/>
+            <InputElem type='textarea' label="Summary" inputWidth={largeInput} value={summary} onChange={(e) => setSummary(e.target.value)}/>
           </Form>
 
           <Form label="Education" icon={educationIcon}>
@@ -42,7 +47,7 @@ function App() {
           </Form>
 
           <Form label="Experience" icon={experienceIcon}>
-            <InputElem label="School" inputWidth={largeInput} />
+            <InputElem label="Prueba" inputWidth={largeInput} />
             <InputElem label="Field of Study" inputWidth={largeInput} />
             <div style={doubleSmInput}>
               <InputElem label="Start Date" inputWidth={smallInput} />
@@ -54,6 +59,10 @@ function App() {
         <div className="preview-container">
           <p className="preview-full-name">{firstName}<br/>{lastName}</p>
           <div className="preview-sidebar">
+            <div className="preview-summary">
+              <p className='preview-summary-header'>Summary</p>
+              <p className='preview-summary-body'>{summary}</p>
+            </div>
           </div>
         </div>
       </div>

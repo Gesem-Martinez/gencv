@@ -71,7 +71,6 @@
 .preview-container {
   background-color: white;
   height: 1056px;
-  max-width: 816px;
   width: 816px;
   min-width: 700px;
   box-shadow: -3px 3px 10px #999999;
@@ -79,9 +78,12 @@
 }
 
 .preview-sidebar {
-  width: 33%;
+  width: 30%;
   height: 1056px;
   background-color: #F1F8F6;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .preview-full-name {
@@ -90,6 +92,25 @@
   position: absolute;
   z-index: 1;
   top: 75px;
-  left: 75px;
+  left: 35px;
   color: #A5CDC1;
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 4px;
+  font-weight: 700;
+}
+
+.preview-summary{
+  position: absolute;
+  top: 370px;
+  left: 35px;
+}
+
+.preview-summary-header{
+  font-weight: 700;
+}
+
+.preview-summary-body{
+  font-size: 0.8rem;
+  width: 160px;
+  height: 200px;
 }
