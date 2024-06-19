@@ -59,9 +59,21 @@ function App() {
         <div className="preview-container">
           <p className="preview-full-name">{firstName}<br/>{lastName}</p>
           <div className="preview-sidebar">
-            <div className="preview-summary">
-              <p className='preview-summary-header'>Summary</p>
-              <p className='preview-summary-body'>{summary}</p>
+            <div className="preview-summary preview-sidebar-info">
+              <p className='preview-sidebar-header'>Summary</p>
+              <p className='preview-sidebar-body'>{summary}</p>
+            </div>
+            <div className="preview-location preview-sidebar-info">
+              <p className='preview-sidebar-header'>Location</p>
+              <p className='preview-sidebar-body'>{location}</p>
+            </div>
+            <div className="preview-email preview-sidebar-info">
+              <p className='preview-sidebar-header'>Email</p>
+              <p className='preview-sidebar-body'>{email}</p>
+            </div>
+            <div className="preview-phone preview-sidebar-info">
+              <p className='preview-sidebar-header'>Phone Number</p>
+              <p className='preview-sidebar-body'>{phoneNumber}</p>
             </div>
           </div>
         </div>

@@ -99,18 +99,40 @@
   font-weight: 700;
 }
 
-.preview-summary{
+.preview-sidebar-info {
   position: absolute;
-  top: 370px;
+  word-wrap: break-word;
   left: 35px;
 }
 
-.preview-summary-header{
+.preview-sidebar-header {
   font-weight: 700;
 }
 
-.preview-summary-body{
+.preview-sidebar-body {
   font-size: 0.8rem;
-  width: 160px;
+  width: 165px;
   height: 200px;
+}
+
+.preview-summary{
+  word-wrap: break-word;
+  top: 350px;
+}
+
+.preview-location {
+  top: 560px;
+  margin-top: 30px;
+  word-wrap: break-word;
+}
+
+.preview-email {
+  top: 640px;
+  margin-top: 30px;
+  word-wrap: break-word;
+}
+
+.preview-phone {
+  margin-top: 30px;
+  top: 730px;
 }
