@@ -136,3 +136,14 @@
   margin-top: 30px;
   top: 730px;
 }
+
+.form-buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn-add{
+  background-color: #71AB73;
+  color: white;
+}
