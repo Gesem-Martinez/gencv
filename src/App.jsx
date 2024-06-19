@@ -13,20 +13,14 @@ function App() {
     summary: "",
   });
 
-  const [educationInfoStatesArr, setEducationInfoStatesArr] = useState([
-    {
-      id: 0,
-      schoolName: "a",
-      fieldOfStudy: "a",
-      startDate: "a",
-      endDate: "a",
-    },
-  ]);
+  const [educationInfoStatesArr, setEducationInfoStatesArr] = useState([]);
+  const [experienceInfoStatesArr, setExperienceInfoStatesArr] = useState([]);
 
   function handleGeneralInfoSetter(e) {
     generalInfoHelper(e, generalInfoStates, setGeneralInfoStates);
     return;
   }
+
 
   return (
     <>
@@ -37,6 +31,8 @@ function App() {
           setGeneralInfoStates={handleGeneralInfoSetter}
           educationInfoArr={educationInfoStatesArr}
           setEducationInfoArr={setEducationInfoStatesArr}
+          experienceInfoArr={experienceInfoStatesArr}
+          setExperienceInfoArr={setExperienceInfoStatesArr}
         />
 
         <div className="preview-container">
@@ -72,14 +68,44 @@ function App() {
 
           <div className="preview-main-content">
             <div className="preview-main-education">
-              <p>Education</p>
+              <p className="preview-education-header">Education</p>
+              <hr />
+              <div className="preview-education-item">
+                <p className="preview-education-info"><span>School:</span></p>
+                <p className="preview-education-info"><span>Field:</span></p>
+                <p className="preview-education-info"><span>Start:</span></p>
+                <p className="preview-education-info"><span>End:</span></p>
+              </div>
               {educationInfoStatesArr.map((educationObj) => {
                 return (
-                  <div key={educationObj.id}>
-                    <p>{educationObj.schoolName}</p>
-                    <p>{educationObj.fieldOfStudy}</p>
-                    <p>{educationObj.startDate}</p>
-                    <p>{educationObj.endDate}</p>
+                  <div key={educationObj.id} className="preview-education-item">
+                    <p className="preview-education-info">{educationObj.schoolName}</p>
+                    <p className="preview-education-info">{educationObj.fieldOfStudy}</p>
+                    <p className="preview-education-info">{educationObj.startDate}</p>
+                    <p className="preview-education-info">{educationObj.endDate}</p>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="preview-main-education">
+              <p className="preview-education-header">Experience</p>
+              <hr />
+              <div className="preview-education-item">
+                <p className="preview-education-info"><span>Company:</span></p>
+                <p className="preview-education-info"><span>Position:</span></p>
+                <p className="preview-education-info"><span>Responsabilities:</span></p>
+                <p className="preview-education-info"><span>Start:</span></p>
+                <p className="preview-education-info"><span>End:</span></p>
+              </div>
+              {experienceInfoStatesArr.map((experienceObj) => {
+                return (
+                  <div key={experienceObj.id} className="preview-education-item">
+                    <p className="preview-education-info">{experienceObj.companyName}</p>
+                    <p className="preview-education-info">{experienceObj.positionTitle}</p>
+                    <p className="preview-education-info">{experienceObj.mainRespon}</p>
+                    <p className="preview-education-info">{experienceObj.jobStartDate}</p>
+                    <p className="preview-education-info">{experienceObj.jobEndDate}</p>
                   </div>
                 );
               })}

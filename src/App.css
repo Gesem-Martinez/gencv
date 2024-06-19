@@ -122,18 +122,18 @@
 
 .preview-location {
   top: 560px;
-  margin-top: 30px;
+  margin-top: 50px;
   word-wrap: break-word;
 }
 
 .preview-email {
   top: 640px;
-  margin-top: 30px;
+  margin-top: 50px;
   word-wrap: break-word;
 }
 
 .preview-phone {
-  margin-top: 30px;
+  margin-top: 50px;
   top: 730px;
 }
 
@@ -155,4 +155,37 @@
   top: 350px;
   right: 0;
   padding-left: 50px;
+}
+
+.preview-education-item {
+  margin-bottom: 7px;
+  display: flex;
+  gap: 40px;
+}
+
+.preview-education-info {
+  font-weight: 500;
+  word-wrap: break-word;
+  flex: 1;
+}
+
+.preview-education-info span {
+  display: block;
+  font-weight: 100;
+}
+
+.preview-education-header {
+  color: #A5CDC1;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 7px;
+}
+
+.preview-main-content {
+  font-size: 0.8rem;
+}
+
+.preview-main-content hr {
+  color: #A5CDC1aa;
+  margin-right: 10px;
 }
