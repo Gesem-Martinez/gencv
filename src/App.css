@@ -147,3 +147,12 @@
   background-color: #71AB73;
   color: white;
 }
+
+.preview-main-content {
+  box-sizing: border-box;
+  position: absolute;
+  width: 70%;
+  top: 350px;
+  right: 0;
+  padding-left: 50px;
+}

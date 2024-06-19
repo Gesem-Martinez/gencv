@@ -3,41 +3,6 @@ import "./App.css";
 import Header from "./Header";
 import FormContainer from "./FormContainer";
 
-function generalInfoHelper(e, state, setter) {
-  if (e.target.id === "First Name") {
-    setter({
-      ...state,
-      firstName: e.target.value,
-    });
-  } else if (e.target.id === "Last Name") {
-    setter({
-      ...state,
-      lastName: e.target.value,
-    });
-  } else if (e.target.id === "Email") {
-    setter({
-      ...state,
-      email: e.target.value,
-    });
-  } else if (e.target.id === "Phone Number") {
-    setter({
-      ...state,
-      phoneNumber: e.target.value,
-    });
-  } else if (e.target.id === "Location") {
-    setter({
-      ...state,
-      location: e.target.value,
-    });
-  } else if (e.target.id === "Summary") {
-    setter({
-      ...state,
-      summary: e.target.value,
-    });
-  }
-}
-
-
 function App() {
   const [generalInfoStates, setGeneralInfoStates] = useState({
     firstName: "",
@@ -47,8 +12,16 @@ function App() {
     location: "",
     summary: "",
   });
-  
-  const [educationInfoStatesArr, setEducationInfoStatesArr] = useState([]);
+
+  const [educationInfoStatesArr, setEducationInfoStatesArr] = useState([
+    {
+      id: 0,
+      schoolName: "a",
+      fieldOfStudy: "a",
+      startDate: "a",
+      endDate: "a",
+    },
+  ]);
 
   function handleGeneralInfoSetter(e) {
     generalInfoHelper(e, generalInfoStates, setGeneralInfoStates);
@@ -63,7 +36,7 @@ function App() {
           generalInfoStates={generalInfoStates}
           setGeneralInfoStates={handleGeneralInfoSetter}
           educationInfoArr={educationInfoStatesArr}
-          setEducationInfoArr={educationInfoStatesArr}
+          setEducationInfoArr={setEducationInfoStatesArr}
         />
 
         <div className="preview-container">
@@ -96,10 +69,61 @@ function App() {
               </p>
             </div>
           </div>
+
+          <div className="preview-main-content">
+            <div className="preview-main-education">
+              <p>Education</p>
+              {educationInfoStatesArr.map((educationObj) => {
+                return (
+                  <div key={educationObj.id}>
+                    <p>{educationObj.schoolName}</p>
+                    <p>{educationObj.fieldOfStudy}</p>
+                    <p>{educationObj.startDate}</p>
+                    <p>{educationObj.endDate}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
         </div>
       </div>
     </>
   );
+}
+
+function generalInfoHelper(e, state, setter) {
+  if (e.target.id === "First Name") {
+    setter({
+      ...state,
+      firstName: e.target.value,
+    });
+  } else if (e.target.id === "Last Name") {
+    setter({
+      ...state,
+      lastName: e.target.value,
+    });
+  } else if (e.target.id === "Email") {
+    setter({
+      ...state,
+      email: e.target.value,
+    });
+  } else if (e.target.id === "Phone Number") {
+    setter({
+      ...state,
+      phoneNumber: e.target.value,
+    });
+  } else if (e.target.id === "Location") {
+    setter({
+      ...state,
+      location: e.target.value,
+    });
+  } else if (e.target.id === "Summary") {
+    setter({
+      ...state,
+      summary: e.target.value,
+    });
+  }
 }
 
 export default App;
