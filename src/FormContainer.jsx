@@ -45,13 +45,6 @@ export default function FormContainer({
     clearEducationInputs();
   };
 
-  const clearEducationInputs = () => {
-    setSchoolName("");
-    setFieldOfStudy("");
-    setStartDate("");
-    setEndDate("");
-  };
-
   const handleAddExperience = () => {
     const newExperience = {
       id: experienceInfoArr.length,
@@ -64,6 +57,13 @@ export default function FormContainer({
 
     setExperienceInfoArr([...experienceInfoArr, newExperience]);
     clearExperienceInputs();
+  };
+
+  const clearEducationInputs = () => {
+    setSchoolName("");
+    setFieldOfStudy("");
+    setStartDate("");
+    setEndDate("");
   };
 
   const clearExperienceInputs = () => {

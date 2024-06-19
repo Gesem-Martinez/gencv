@@ -41,6 +41,8 @@ function App() {
             <br />
             {generalInfoStates.lastName}
           </p>
+          <div className="user-image">
+          </div>
           <div className="preview-sidebar">
             <div className="preview-summary preview-sidebar-info">
               <p className="preview-sidebar-header">Summary</p>
