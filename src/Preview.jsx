@@ -1,11 +1,17 @@
-import { usePDF } from "react-to-pdf";
+import { usePDF, Resolution } from "react-to-pdf";
 
 export default function Preview({
   generalInfoStates = {},
   educationInfoStatesArr = [],
   experienceInfoStatesArr = [],
 }) {
-  const { toPDF, targetRef } = usePDF({ filename: "GENCV.pdf" });
+  const { toPDF, targetRef } = usePDF({ 
+    filename: "GENCV.pdf",
+    resolution: Resolution.HIGH,
+    page: {
+      format: 'letter'
+    }
+  });
 
   return (
     <div className="preview-wrapper">
