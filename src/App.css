@@ -40,6 +40,8 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
+  height: 100vh;
+  overflow: scroll;
 }
 
 .input-container {
@@ -92,6 +94,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 
@@ -115,7 +118,6 @@
   border: 10px solid #A5CDC1;
   border-radius: 50%;
   background-color: #A5CDC1;
-  background-image: url("./assets/terry.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -143,9 +145,6 @@
 
 .preview-email {
   word-wrap: break-word;
-}
-
-.preview-phone {
 }
 
 .form-buttons-container {
@@ -177,16 +176,29 @@
 
 .experience-item {
   gap: 20px;
+  margin-bottom: 20px;
 }
 
 .experience-date {
   display: flex;
   flex-direction: row;
   gap: 5px;
+  font-weight: 300;
+}
+
+.experience-position {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.experience-company {
+  font-size: 0.9rem;
+  font-weight: 300;
+
+  margin-bottom: 5px;
 }
 
 .preview-section-info {
-  font-weight: 500;
   word-wrap: break-word;
   flex: 1;
 }
@@ -211,3 +223,4 @@
   color: #A5CDC1aa;
   margin-right: 10px;
 }
+
