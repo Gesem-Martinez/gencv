@@ -1,4 +1,5 @@
 import { usePDF, Resolution } from "react-to-pdf";
+import '../styles/Preview.css';
 
 export default function Preview({
   generalInfoStates = {},

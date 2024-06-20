@@ -1,0 +1,23 @@
+.header-container {
+  background-color: #71ab73;
+}
+
+.header-content {
+  width: 80%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-logo {
+  width: 100px;
+  height: 100px;
+}
+
+.header-title {
+  color: white;
+  font-weight: 700;
+  display: inline-block;
+}

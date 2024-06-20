@@ -1,0 +1,30 @@
+.forms-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  height: 100vh;
+  overflow: scroll;
+}
+
+@media (max-width: 1400px) {
+  .main-container {
+    flex-direction: column;
+  }
+  
+  .forms-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+}
+
+.form-buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn-add {
+  background-color: #71ab73;
+  color: white;
+}

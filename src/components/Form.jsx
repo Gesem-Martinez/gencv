@@ -1,3 +1,5 @@
+import '../styles/Form.css';
+
 export default function Form({ label, icon, children = [] }) {
   return (
     <form action="" className="general-info-form">

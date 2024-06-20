@@ -1,0 +1,21 @@
+#root {
+  width: 100vw;
+  margin: 0 auto;
+}
+
+
+
+/* Main Content */
+.main-container {
+  max-width: 80%;
+  margin: 50px auto;
+
+  display: flex;
+  gap: 100px;
+}
+
+
+
+
+
+/* Preview */

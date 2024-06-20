@@ -1,0 +1,20 @@
+.general-info-form {
+  background-color: white;
+  padding: 20px 25px;
+  border-radius: 8px;
+  max-width: 378px;
+}
+
+.form-header {
+  display: flex;
+  gap: 10px;
+}
+
+.form-title {
+  margin-bottom: 20px;
+}
+
+.form-icon {
+  width: 2rem;
+  height: 2rem;
+}

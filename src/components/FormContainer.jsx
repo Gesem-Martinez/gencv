@@ -1,9 +1,10 @@
 import InputElem from "./InputElem";
 import Form from "./Form";
-import generalIcon from "./assets/account.svg";
-import educationIcon from "./assets/school.svg";
-import experienceIcon from "./assets/professional.svg";
+import generalIcon from "../assets/account.svg";
+import educationIcon from "../assets/school.svg";
+import experienceIcon from "../assets/professional.svg";
 import { useState } from "react";
+import '../styles/FormContainer.css';
 
 export default function FormContainer({
   generalInfoStates,

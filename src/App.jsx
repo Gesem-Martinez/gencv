@@ -1,8 +1,8 @@
 import { useState } from "react";
-import "./App.css";
-import Header from "./Header";
-import FormContainer from "./FormContainer";
-import Preview from "./Preview";
+import "./styles/App.css";
+import Header from "./components/Header";
+import FormContainer from "./components/FormContainer";
+import Preview from "./components/Preview";
 
 function App() {
 

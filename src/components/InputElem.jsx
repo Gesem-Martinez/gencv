@@ -1,3 +1,5 @@
+import '../styles/InputElem.css';
+
 export default function InputElem({
   type = "text",
   label,
