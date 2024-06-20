@@ -30,6 +30,7 @@ export default function FormContainer({
   const doubleSmInput = {
     display: "flex",
     justifyContent: "space-between",
+    flexWrap: 'wrap',
   };
 
   const handleAddEducation = () => {
