@@ -5,6 +5,7 @@ import FormContainer from "./FormContainer";
 import Preview from "./Preview";
 
 function App() {
+
   const [generalInfoStates, setGeneralInfoStates] = useState({
     firstName: "",
     lastName: "",

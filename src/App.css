@@ -88,6 +88,23 @@
 }
 
 /* Preview */
+.preview-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 30px;
+}
+
+.download-btn {
+  background-color: #7E88F7;
+  color: white;
+}
+
+.download-btn:hover {
+  
+  background-color: #3845D5;
+}
+
 .preview-container {
   min-height: 1056px;
   width: 816px;
