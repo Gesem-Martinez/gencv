@@ -14,9 +14,8 @@ export default function InputElem({
           id={label}
           value={value}
           onChange={onChange}
-          cols="30"
-          rows="10"
-          maxLength={265}
+          cols="40"
+          rows="7"
         ></textarea>
       </div>
     );

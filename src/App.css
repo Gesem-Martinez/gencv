@@ -69,42 +69,50 @@
 
 /* Preview */
 .preview-container {
-  background-color: white;
   height: 1056px;
   width: 816px;
   min-width: 700px;
+  padding: 35px;
   box-shadow: -3px 3px 10px #999999;
-  position: relative;
+  background: linear-gradient(to right, #F1F8F6 0 30%, #FFFFFF 30% 70%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.preview-sidebar {
-  width: 30%;
-  height: 1056px;
-  background-color: #F1F8F6;
-  position: absolute;
-  top: 0;
-  left: 0;
+.preview-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.content-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 
 .preview-full-name {
-  margin: 0;
-  font-size: 5rem;
-  position: absolute;
-  z-index: 1;
-  top: 75px;
-  left: 35px;
+  font-size: 4rem;
   color: #A5CDC1;
   font-family: 'Times New Roman', Times, serif;
   letter-spacing: 4px;
   font-weight: 700;
 }
 
+.preview-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
 .user-image{
-  position: absolute;
-  top: 75px;
-  right: 50px;
   height: 250px;
   width: 250px;
+  border: 10px solid #A5CDC1;
   border-radius: 50%;
   background-color: #A5CDC1;
   background-image: url("./assets/terry.jpg");
@@ -113,9 +121,7 @@
 }
 
 .preview-sidebar-info {
-  position: absolute;
   word-wrap: break-word;
-  left: 35px;
 }
 
 .preview-sidebar-header {
@@ -124,30 +130,22 @@
 
 .preview-sidebar-body {
   font-size: 0.8rem;
-  width: 165px;
-  height: 200px;
+  width: 185px;
 }
 
 .preview-summary{
   word-wrap: break-word;
-  top: 350px;
 }
 
 .preview-location {
-  top: 560px;
-  margin-top: 50px;
   word-wrap: break-word;
 }
 
 .preview-email {
-  top: 640px;
-  margin-top: 50px;
   word-wrap: break-word;
 }
 
 .preview-phone {
-  margin-top: 50px;
-  top: 730px;
 }
 
 .form-buttons-container {
@@ -163,31 +161,42 @@
 
 .preview-main-content {
   box-sizing: border-box;
-  position: absolute;
   width: 70%;
-  top: 350px;
-  right: 0;
-  padding-left: 50px;
+  padding: 0 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.preview-education-item {
+.preview-section-item {
   margin-bottom: 7px;
   display: flex;
   gap: 40px;
 }
 
-.preview-education-info {
+.experience-item {
+  gap: 20px;
+}
+
+.experience-date {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.preview-section-info {
   font-weight: 500;
   word-wrap: break-word;
   flex: 1;
 }
 
-.preview-education-info span {
+.preview-section-info span {
   display: block;
   font-weight: 100;
 }
 
-.preview-education-header {
+.preview-section-header {
   color: #A5CDC1;
   font-weight: 700;
   font-size: 1.3rem;

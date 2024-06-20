@@ -60,6 +60,7 @@ input:focus, textarea:focus{
 
 textarea {
   resize: none;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 label {
