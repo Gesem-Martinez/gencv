@@ -26,7 +26,6 @@ export default function InputElem({
         <input
           type={type}
           id={label}
-          style={{ maxWidth: inputWidth }}
           value={value}
           onChange={onChange}
         />
