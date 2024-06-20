@@ -71,7 +71,7 @@
 
 /* Preview */
 .preview-container {
-  height: 1056px;
+  min-height: 1056px;
   width: 816px;
   min-width: 700px;
   padding: 35px;
@@ -118,8 +118,16 @@
   border: 10px solid #A5CDC1;
   border-radius: 50%;
   background-color: #A5CDC1;
-  background-size: cover;
-  background-position: center;
+}
+
+.user-image img {
+  border-radius: 50%;
+  height: inherit;
+  width: inherit;
+}
+
+.user-image img[src=""] {
+  visibility: hidden;
 }
 
 .preview-sidebar-info {

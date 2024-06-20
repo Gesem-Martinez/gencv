@@ -117,6 +117,12 @@ export default function FormContainer({
           value={generalInfoStates.summary}
           onChange={setGeneralInfoStates}
         />
+        <InputElem
+          type="file"
+          label="Picture"
+          inputWidth={largeInput}
+          onChange={setGeneralInfoStates}
+        />
       </Form>
 
       <Form label="Education" icon={educationIcon}>

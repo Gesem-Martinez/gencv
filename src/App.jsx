@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./Header";
 import FormContainer from "./FormContainer";
@@ -11,6 +11,7 @@ function App() {
     phoneNumber: "",
     location: "",
     summary: "",
+    userPhoto: "",
   });
 
   const [educationInfoStatesArr, setEducationInfoStatesArr] = useState([]);
@@ -41,7 +42,9 @@ function App() {
               <br />
               {generalInfoStates.lastName}
             </p>
-            <div className="user-image"></div>
+            <div className="user-image">
+              <img src={generalInfoStates.userPhoto} alt="" />
+            </div>
           </div>
 
           <div className="content-wrapper">
@@ -178,6 +181,16 @@ function generalInfoHelper(e, state, setter) {
       ...state,
       summary: e.target.value,
     });
+  } else if (e.target.id === "Picture") {
+    const file = e.target.files[0];
+
+    if (file) {
+      const objURL = URL.createObjectURL(file);
+      setter({
+        ...state,
+        userPhoto: objURL,
+      });
+    }
   }
 }
 
