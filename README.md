@@ -1,8 +1,5 @@
 # GenCV
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This CV generator offers basic input options for the user's general information, educational information and professional experience information as well as a picture. You can download the CV as PDF at any point.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Currently only one CV design is supported.
